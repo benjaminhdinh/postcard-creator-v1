@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    flex-grow: 0;
+  }
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: xx-large;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  div.postcard{
+    display: flex;
+    position: relative;
+    margin: auto;
+    background-color: #e6e2cf;
+    border-radius: 10px 10px 10px 10px;
+  }
+  div.leftPost{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: dashed 1px black;
+  }
+  div.imageWrapper {
+    width: 100%;
+  }
+  img#serverImage{
+    display:flex;
+    width: 100%;
+    position: relative;
+  }
+  div#chooseImage {
+    position: relative;
+    text-align: center;
+  }
+  div#replaceImage {
+    display: none;
+    position: relative;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  label[for=fileChooser]{
+    text-align:center;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  label[for=replaceFile]{
+    text-align:center;
+    color: black;
+    font-weight: bold;
+    font-size: small;
+    padding: 5px 15px 5px 15px;
+    border:2px solid black;
+    cursor: pointer;
+  }
+  label[for=sharing]{
+    text-align:center;
+    color:black;
+    font-size: small;
+    font-weight: bold;
+    padding: 5px 15px 5px 15px;
+    border:2px solid black;
+    cursor: pointer;
+  }
+  input#fileChooser {
+    display: none;
+  }
+  input#replaceFile {
+    display:none;
+  }
+  div.rightPost {
+    cursor:pointer;
+    display: flex;
+    font-family: Indie Flower;
+    font-size: medium;
+  }
+  [contenteditable="true"]:empty:before {
+    content:attr(placeholder);
+    pointer-events:none;
+  }
+  div.customization{
+    margin: auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  ul {
+    list-style-type: none;
+    list-style-position:inside;
+  }
+  p.chooseText{
+    padding-top: 25px;
+    padding-bottom: 7px;
+    font-family: Arial;
+  }
+  li{
+    margin: 5px 0;
+    cursor: pointer;
+  }
+  li:before{
+    content: '\25C7';
+    padding-right: 8px;
+  }
+  li.selected:before{
+    content: '\2756';
+  }
+  #IndieFlower{
+    font-family: Indie Flower;
+  }
+  #DancingScript{
+    font-family: Dancing Script;
+  }
+  #LongCang{
+    font-family: Long Cang;
+  }
+  #HomemadeApple{
+    font-family: Homemade Apple;
+  }
+  div.chooseColor{
+    padding-left: 20px;
+    width: 250px;
+  }
+  span.dot{
+    display: inline-block;
+    margin: 5px 5px 5px 5px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border:none;
+    outline:none;
+  }
+  span.dot:hover {
+      border: 2px dashed black
+  }
+  span.active{
+    border: 2px solid black
+  }
+  #color1{
+    background-color:#e6e2cf;
+  }
+  #color2{
+    background-color:#dbcaac;
+  }
+  #color3{
+    background-color:#c9cbb3;
+  }
+  #color4{
+    background-color:#bbc9ca;
+  }
+  #color5{
+    background-color:#a6a5b5;
+  }
+  #color6{
+    background-color:#b5a6ab;
+  }
+  #color7{
+    background-color:#eccfcf;
+  }
+  #color8{
+    background-color:#eceeeb;
+  }
+  #color9{
+    background-color:#bab9b5;
+  }
+  div#shareControl{
+    margin-top: 55px;
+  }
+  @media screen and (max-width:480px) {
+    div.postcard{
+      position: relative;
+      margin:auto;
+      min-height: 450px;
+      width: 90%;
+      flex-direction: column;
+    }
+    div.leftPost{
+      position: relative;
+      width: 90%;
+      min-height: 200px;
+      margin: 15px 15px 5px 15px;
+    }
+    div#controls{
+      padding-left: 0px;
+      padding-right: 0px;
+      height: 40px;
+    }
+    div.rightPost{
+      width: 90%;
+      border-top: solid 1px black;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    div.customization{
+      flex-direction: column;
+      font-size: small;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-top: 20px;
+    }
+    p.chooseText{
+      padding-top: 10px;
+      padding-bottom: 5px;
+    }
+    div.chooseColor{
+      padding-left: 0px;
+      width: 100%;
+    }
+    span.dot{
+      display: inline-block;
+      margin: 3px 3px 3px 3px;
+      cursor: pointer;
+      height: 30px;
+      width: 30px;
+    }
+    div#shareControl{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    } 
+  }
+  @media screen and (min-width:490px) {
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: xx-large;
+    }
+    div.postcard{
+      min-height: 300px;
+      width: 600px;
+      flex-direction: row;
+    }
+    div.imageWrapper{
+      max-width: 250px;
+    }
+    div.leftPost{
+      width: 250px;
+      margin: 25px 10px 25px 25px;
+    }
+    div#controls{
+      text-align: center;
+    }
+    div.rightPost{
+      width:300px;
+      border-left: solid 1px black;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 15px;
+    }
+  }

@@ -1,0 +1,102 @@
+body {
+    display:block;
+    position: relative;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    flex-grow: 0;
+  }
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: xx-large;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  div.postcard{
+    display: flex;
+    position: relative;
+    margin: auto;
+    background-color: #e6e2cf;
+    border-radius: 10px 10px 10px 10px;
+  }
+  
+  div.leftPost{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+  }
+  
+  img#serverImage{
+    display:flex;
+    width: 100%;
+    position: relative;
+  }
+  
+  div.rightPost {
+    display: flex;
+    font-family: Indie Flower;
+    font-size: medium;
+  }
+  
+  @media screen and (max-width:480px) {
+    div.postcard{
+      position: relative;
+      margin:auto;
+      min-height: 450px;
+      max-width: 350px;
+      flex-direction: column;
+    }
+    div.leftPost{
+      position: relative;
+      width: 90%;
+      min-height: 200px;
+      margin: 15px 15px 0px 15px;
+    }
+    div.rightPost{
+      width: 90%;
+      border-top: solid 1px black;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+  @media screen and (min-width:490px) {
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: xx-large;
+    }
+    div.postcard{
+      min-height: 300px;
+      width: 600px;
+      flex-direction: row;
+    }
+    div.leftPost{
+      margin: 25px 0px 25px 25px;
+    }
+    div.rightPost{
+      width:300px;
+      border-left: solid 1px black;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 15px;
+    }
+  }

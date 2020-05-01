@@ -1,0 +1,77 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Show me!</title>
+    <meta charset="utf-8">
+<!--     <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Homemade+Apple|Indie+Flower|Long+Cang&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+    <header>
+      <h1>
+         Daily Postcard Creator
+      </h1>
+    </header>
+    
+    <main>
+      <div class="postcard">
+        <div class="leftPost">
+          <div class="imageWrapper">
+              <img id="serverImage"/>
+          </div>
+          <div id="chooseImage">
+            <label for="fileChooser" id="chooseLabel">Choose Image</label>
+            <input type="file" id="fileChooser" accept="image/png, .jpeg, .jpg, image/gif">   
+          </div>
+          <div id="replaceImage">
+            <label for="replaceFile" id="replaceLabel">Replace Image</label>
+            <input type="file" id="replaceFile" accept="image/png, .jpeg, .jpg, image/gif">   
+          </div>
+        </div>
+        <div class="rightPost" contenteditable="true" placeholder="Write your message here!"></div>
+      </div>
+      
+      <div class="customization">
+        <div class="chooseFont">
+          <p class="chooseText">Choose your font</p>
+          <ul>
+            <li class="bullets selected" id="IndieFlower">Indie Flower</li>
+            <li class="bullets" id="DancingScript">Dancing Script</li>
+            <li class="bullets" id="LongCang">Long Cang</li>
+            <li class="bullets" id="HomemadeApple">Homemade Apple</li>
+          </ul>
+        </div>
+        <div class="chooseColor">
+          <p class="chooseText">Choose your color</p>
+          <div id="dotset">
+            <span onmouseover="hovering(1)" onmouseout= "mouseout()" class="dot active" id="color1"></span>
+            <span onmouseover="hovering(2)" onmouseout= "mouseout()" class="dot" id="color2"></span>
+            <span onmouseover="hovering(3)" onmouseout= "mouseout()" class="dot" id="color3"></span>
+            <span onmouseover="hovering(4)" onmouseout= "mouseout()" class="dot" id="color4"></span>
+            <span onmouseover="hovering(5)" onmouseout= "mouseout()" class="dot" id="color5"></span>
+            <span onmouseover="hovering(6)" onmouseout= "mouseout()" class="dot" id="color6"></span>
+            <span onmouseover="hovering(7)" onmouseout= "mouseout()" class="dot" id="color7"></span>
+            <span onmouseover="hovering(8)" onmouseout= "mouseout()" class="dot" id="color8"></span>
+            <span onmouseover="hovering(9)" onmouseout= "mouseout()" class="dot" id="color9"></span>
+          </div>
+        </div>
+        <div id="shareControl">
+            <label for="sharing">Share postcard</label>   
+        </div>
+      </div>
+    </main>
+    
+ 
+    <footer>
+    <script src="./creator.js"></script>
+    </footer>
+  
+  </body>
+</html>
